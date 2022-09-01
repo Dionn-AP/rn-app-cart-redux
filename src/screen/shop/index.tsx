@@ -6,59 +6,69 @@ import {
     Text,
     Image,
     Button,
+    TouchableOpacity,
     FlatList,
     ScrollView
 } from 'react-native';
 
+import Cart from "../../components/cart";
 import { products } from '../../constants';
-import styles from "./styles";
+import styles from "./style";
 
 const Shop = () => {
     return (
         <View
             style={styles.container}
         >
-            <ScrollView>
-            {products?.map(item => (
-                <View
-                    key={item.id}
-                    style={styles.card}
-                >
-                    <Image
-                        source={{ uri: item.image }}
-                        style={styles.image}
-                    />
+            <Cart />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                {products?.map(item => (
                     <View
-                        style={styles.infoBox}
+                        key={item.id}
+                        style={styles.card}
                     >
-                        <Text
-                            style={styles.productName}
-                        >{item.name}</Text>
-                        <Text
-                            style={styles.brandctName}
-                        >{item.brand}</Text>
-                        <Text
-                            style={styles.price}
+                        <View style={styles.containerImage}>
+                            <Image
+                                source={{ uri: item.image }}
+                                style={styles.image}
+                            />
+                        </View>
+
+                        <View
+                            style={styles.infoBox}
                         >
-                            {Intl.NumberFormat('pt-BR', {
-                                style: 'currency',
-                                currency: 'BRL'
-                            }).format(item.price)}
-                        </Text>
+                            <Text
+                                style={styles.productName}
+                            >{item.name}</Text>
+                            <Text
+                                style={styles.brandctName}
+                            >{item.brand}</Text>
+                            <Text
+                                style={styles.price}
+                            >
+                                {Intl.NumberFormat('pt-BR', {
+                                    style: 'currency',
+                                    currency: 'BRL'
+                                }).format(item.price)}
+                            </Text>
 
-                        <Button
-                            title='Adicionar'
-
-                            onPress={() => alert('Adicionar')}
-                        />
-                            <Button
-                            title='Remover'
-                            onPress={() => alert('Remover')}
-                        />
-
+                            <TouchableOpacity
+                                style={styles.addCart}
+                                onPress={() => alert('Adicionar')}>
+                                <Text
+                                    style={styles.textButtonAdd}
+                                >ADICIONAR</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.removeCart}
+                                onPress={() => alert('Remover')}>
+                                <Text
+                                    style={styles.textButtonRemove}
+                                >REMOVER</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                </View>
-            ))}
+                ))}
             </ScrollView>
         </View>
     )
