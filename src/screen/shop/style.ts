@@ -8,8 +8,15 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F0FFF0',
-        paddingTop: 95,
+        paddingTop: 85,
         paddingHorizontal: 12
+    },
+    textTop: {
+        color: '#000080',
+        fontSize: 26,
+        fontWeight: 'bold',
+        letterSpacing: 5,
+        marginBottom: 15
     },
     card: {
         backgroundColor: '#B0E0E6',

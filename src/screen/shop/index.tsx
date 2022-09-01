@@ -21,6 +21,11 @@ const Shop = () => {
             style={styles.container}
         >
             <Cart />
+            <View>
+                <Text
+                    style={styles.textTop}
+                >PHONE  STORE</Text>
+            </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 {products?.map(item => (
                     <View
