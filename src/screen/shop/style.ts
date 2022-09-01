@@ -8,7 +8,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F0FFF0',
-        paddingTop: 85,
+        paddingTop: 95,
         paddingHorizontal: 12
     },
     textTop: {

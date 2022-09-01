@@ -5,14 +5,25 @@ import {
 } from 'react-native';
 
 import {
+    useSelector
+} from 'react-redux';
+
+import { cartStateData } from '../../store/modules/cart/reducer';
+
+import {
     AntDesign
 } from '@expo/vector-icons';
 
 import styles from './style';
 
 const Cart = () => {
+
+    const cart = useSelector(cartStateData);
+
     return (
-        <View style={styles.containerCart}>
+        <View
+            style={styles.containerCart}
+        >
             <TouchableOpacity
                 onPress={() => alert('Adicionar')}
             >
@@ -22,8 +33,14 @@ const Cart = () => {
                     color="white"
                 />
             </TouchableOpacity>
-            <View style={styles.countProductCart}>
-                <Text style={styles.textCart}>0</Text>
+            <View
+                style={styles.countProductCart}
+            >
+                <Text
+                    style={styles.textCart}
+                >
+                    {cart?.length}
+                </Text>
             </View>
         </View>
     )
