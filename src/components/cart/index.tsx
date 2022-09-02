@@ -25,7 +25,11 @@ const Cart = () => {
             style={styles.containerCart}
         >
             <TouchableOpacity
-                onPress={() => alert('Adicionar')}
+                onPress={() => cart.length ?
+                    alert(`Seu carrinho contem ${cart.length} itens.`)
+                    :
+                    alert(`Seu carrinho esta vazio.`)
+                }
             >
                 <AntDesign
                     name="shoppingcart"
@@ -39,7 +43,7 @@ const Cart = () => {
                 <Text
                     style={styles.textCart}
                 >
-                    {cart?.length}
+                    {cart.length}
                 </Text>
             </View>
         </View>

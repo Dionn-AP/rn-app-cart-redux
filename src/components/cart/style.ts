@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     countProductCart: {
         position: 'absolute',
-        right: -1,
+        right: -3,
         bottom: -9
     },
     textCart: {

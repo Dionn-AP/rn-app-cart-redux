@@ -2,10 +2,21 @@ import "intl";
 import "intl/locale-data/jsonp/pt-BR";
 
 import {
+    useDispatch
+} from 'react-redux';
+
+import {
+    addNewItem
+} from '../../store/modules/cart/reducer';
+
+import {
+    IProduct
+} from '../../types/index';
+
+import {
     View,
     Text,
     Image,
-    Button,
     TouchableOpacity,
     FlatList,
     ScrollView
@@ -16,6 +27,13 @@ import { products } from '../../constants';
 import styles from "./style";
 
 const Shop = () => {
+
+    const dispatch = useDispatch();
+
+    const addCartItems = (product: IProduct) => {
+        dispatch(addNewItem(product))
+    }
+
     return (
         <View
             style={styles.container}
@@ -59,14 +77,14 @@ const Shop = () => {
 
                             <TouchableOpacity
                                 style={styles.addCart}
-                                onPress={() => alert('Adicionar')}>
+                                onPress={() => addCartItems(item)}>
                                 <Text
                                     style={styles.textButtonAdd}
                                 >ADICIONAR</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
                                 style={styles.removeCart}
-                                onPress={() => alert('Remover')}>
+                                onPress={() => alert('Deseja remover?')}>
                                 <Text
                                     style={styles.textButtonRemove}
                                 >REMOVER</Text>

@@ -6,6 +6,6 @@ import cartData from './modules/cart/reducer';
 
 export default configureStore({
     reducer: {
-        cartData: cartData
+        cart: cartData
     }
 }); 
