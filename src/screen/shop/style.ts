@@ -7,19 +7,19 @@ export default StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F0FFF0',
+        backgroundColor: '#EAEBED',
         paddingTop: 95,
         paddingHorizontal: 12
     },
     textTop: {
-        color: '#000080',
+        color: '#244D61',
         fontSize: 26,
         fontWeight: 'bold',
-        letterSpacing: 5,
+        letterSpacing: 8,
         marginBottom: 15
     },
     card: {
-        backgroundColor: '#B0E0E6',
+        backgroundColor: '#5689C0',
         marginBottom: 12,
         width: '100%',
         justifyContent: 'center',
@@ -32,7 +32,6 @@ export default StyleSheet.create({
     },
     containerImage: {
         width: '40%'
-
     },
     image: {
         height: 120,
@@ -42,30 +41,32 @@ export default StyleSheet.create({
         width: '60%'
     },
     productName: {
+        color: '#EAEBED',
         fontSize: 20,
         fontWeight: 'bold'
     },
     brandctName: {
+        color: '#EAEBED',
         fontSize: 14
     },
     price: {
+        color: '#EAEBED',
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 12
     },
     addCart: {
-        color: '#ffffff',
-        backgroundColor: '#00BFFF',
+        color: '#EAEBED',
+        backgroundColor: '#75E2FF',
         borderRadius: 5,
         alignItems: 'center',
-        padding: 3,
+        padding: 5,
         marginBottom: 7
     },
     removeCart: {
-        color: '#fff',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#EAEBED',
         borderWidth: 2,
-        borderColor: '#00BFFF',
+        borderColor: '#EAEBED',
         borderRadius: 5,
         alignItems: 'center',
         padding: 3
@@ -75,12 +76,57 @@ export default StyleSheet.create({
         fontWeight: 'bold',
     },
     textButtonRemove: {
-        color: '#87CEEB',
+        color: '#5689C0',
         fontWeight: 'bold',
     },
     imageCart: {
         borderColor: 'black',
         borderWidth: 2,
         backgroundColor: 'grey'
+    },
+    modalDetail: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 15,
+        position: 'relative',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)'
+    },
+    intoModalDetail: {
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 15,
+        position: 'relative',
+        backgroundColor: '#EAEBED',
+        borderRadius: 15,
+        borderColor: '#75E2FF',
+        borderWidth: 4,
+        height: 450,
+        width: 370
+    },
+    textDetails: {
+        color: '#5689C0',
+        fontSize: 16,
+        marginTop: 3,
+        textAlign: 'center'
+    },
+    containerImageModalDetail: {
+        height: '55%',
+        marginBottom: 10
+    },
+    imageModalDetail: {
+        height: 250,
+        width: 250
+    },
+    infoModalDetail: {
+        height: '35%',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        paddingHorizontal: 15
+    },
+    btnCloseModaldetail: {
+        position: 'absolute',
+        top: 7.6,
+        right: 24
     }
 });
